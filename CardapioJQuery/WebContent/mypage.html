@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="ISO-8859-1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="mystyles.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="myscripts.js"></script>
+<title>Atividade Pweb 7.3</title>
+
+</head>
+<body style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg/1200px-Good_Food_Display_-_NCI_Visuals_Online.jpg)">
+  
+  <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="myModalLabel">Pedido Concluido!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    
+       <div class="modal-body">
+           <h6>Subtotal:</h6>
+         <div  id="result">
+        R$0.00
+          </div> 
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+  </div>
+    <div class="container">
+        <div class="page-header text-center">
+        <h1>Atividade Pweb 7.3</h1>
+        </div>
+        <div class="jumbotron shadow-lg p-3 mb-5 rounded">
+<div class="container">
+  <h2>Escolha seu prato</h2>
+    <p>Escolha seu prato principal</p>
+  
+  <form>
+    <label name="postage" class="radio-inline">
+      <input id="pp1" type="radio" name="optradio" onchange="setTotal()">Massa
+    </label>
+    <label class="radio-inline">
+      <input id="pp2" type="radio" name="optradio" onchange="setTotal()">Carne
+    </label>
+    <label class="radio-inline">
+      <input id="pp3" type="radio" name="optradio" onchange="setTotal()">Peixe
+    </label>
+     <label class="radio-inline">
+      <input id="pp4" type="radio" name="optradio">Frango
+    </label>
+  </form>
+    <p>Escolha seu acompanhamento</p>
+     <form>
+    <div class="checkbox">
+      <label><input id="ac1" type="checkbox" value="" onchange="setTotal()">Salada</label>
+    </div>
+    <div class="checkbox">
+      <label><input id="ac2" type="checkbox" value="" onchange="setTotal()">Legumes</label>
+    </div>
+    <div class="checkbox">
+      <label><input id="ac3" type="checkbox" value="" onchange="setTotal()">Farofa</label>
+    </div>
+    <div class="checkbox">
+      <label><input id="ac4" type="checkbox" value="" onchange="setTotal()">Fritas</label>
+    </div>
+  </form>
+     <p>Escolha seu convenio</p>
+   <select id="drp1" type="select" value="potato" class="custom-select" style="margin-bottom: 5%;" onchange="setTotal()">
+  <option value="Fatec">Fatec</option>
+  <option value="Ufscar">Ufscar</option>
+  <option value="Uniso">Uniso</option>
+    <option value="Unip">Unip</option>
+</select>
+     <div class="form-group">
+      <label for="exampleFormControlTextarea1">Observacoes</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+     </div>
+    <div class="container">
+      
+    <button id="btn_fin" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" aria-expanded="false" disabled="">
+  		Finalizar
+  	</button>
+      
+	  <div id="hid_div" class="collapse" style="">
+		  <h5 id="resultado" value=""></h5>
+	  </div>
+</div>
+</div>
+</div>    
+</div>
+</body></html>
